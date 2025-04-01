@@ -1,0 +1,3 @@
+target_compile_definitions(${CMAKE_CURRENT_MODULE} PRIVATE
+    SUPPORT_HARFBUZZ_SHAPER
+)

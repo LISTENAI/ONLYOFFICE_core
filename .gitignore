@@ -48,3 +48,6 @@ DesktopEditor/fontengine/js/common/freetype-2.10.4
 Common/3dParty/openssl/openssl/
 
 msvc_make.bat
+
+!CMakeLists.txt
+/prebuilts

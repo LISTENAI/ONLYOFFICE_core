@@ -54,6 +54,7 @@ using namespace std;
 #include "zlib-1.2.11/contrib/minizip/iowin32.h"
 #endif
 #include <zlib.h>
+#include "zlib_addon.h"
 
 namespace ZLibZipUtils
 {

@@ -47,7 +47,7 @@
 #endif
 
 #ifdef HAVE_IO_H
-# include <io.h>
+// # include <io.h>
 #endif
 
 #include "tiffiop.h"

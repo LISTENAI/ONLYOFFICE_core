@@ -69,9 +69,9 @@
 //# endif
 //#endif
 
-#ifndef _LINUX
-#define lfind _lfind
-#endif
+// #ifndef _LINUX
+// #define lfind _lfind
+// #endif
 /*
  * Local Variables:
  * mode: c
