@@ -8,6 +8,7 @@ namespace NExtractTools
 {
 	_UINT32 hwp_file2docx(const std::wstring& sFrom, const std::wstring& sTo, InputParams& params, ConvertParams& convertParams, bool bIsXmlFormat, bool bConvertToDir)
 	{
+#ifdef X2T_USE_IWORKFILE
 		CHWPFile oFile;
 
 		oFile.SetTempDirectory(convertParams.m_sTempDir);
@@ -20,6 +21,9 @@ namespace NExtractTools
 			return AVS_FILEUTILS_ERROR_CONVERT;
 
 		return 0;
+#else
+		return AVS_FILEUTILS_ERROR_CONVERT;
+#endif
 	}
 
 	_UINT32 hwp2docx(const std::wstring& sFrom, const std::wstring& sTo, InputParams& params, ConvertParams& convertParams)

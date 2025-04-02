@@ -32,8 +32,9 @@ core_windows {
     LIBS += $$OPENSSL_LIBS_DIRECTORY/libssl.lib
 	LIBS += $$OPENSSL_LIBS_DIRECTORY/libcrypto.lib
 } else {
-    LIBS += $$OPENSSL_LIBS_DIRECTORY/libssl.a
-	LIBS += $$OPENSSL_LIBS_DIRECTORY/libcrypto.a
+    LIBS += -L/usr/local/lib
+    LIBS += -lssl
+	LIBS += -lcrypto
 }
 
 INCLUDEPATH += $$OPENSSL_LIBS_DIRECTORY/../include

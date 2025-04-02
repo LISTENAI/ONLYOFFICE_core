@@ -78,6 +78,7 @@ void limit_memory (size_t) { /* no-op */ }
 
 #else   // _RWSTD_NO_SETRLIMIT && !_WIN32
 
+#include <stddef.h>
 void limit_memory (size_t) { /* no-op */ }
 
 #endif  // _RWSTD_NO_SETRLIMIT

@@ -24,7 +24,17 @@
 #include "libplatform/libplatform.h"
 
 #ifndef DISABLE_MEMORY_LIMITATION
-#include "src/base/sys-info.h"
+#include <cstdint>
+
+namespace v8 {
+namespace base {
+class SysInfo {
+ public:
+  static uint64_t AmountOfVirtualMemory();
+  static uint64_t AmountOfPhysicalMemory();
+};
+}  // namespace base
+}  // namespace v8
 #endif
 
 #ifdef V8_VERSION_89_PLUS

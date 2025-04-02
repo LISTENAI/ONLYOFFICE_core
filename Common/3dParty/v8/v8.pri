@@ -6,6 +6,7 @@ v8_version_89 {
     CONFIG += use_v8_monolith
     DEFINES += V8_VERSION_89_PLUS
 	DEFINES += V8_SUPPORT_SNAPSHOTS
+    DEFINES += V8_COMPRESS_POINTERS
 
     core_win_32:CONFIG += build_platform_32
     core_linux_32:CONFIG += build_platform_32

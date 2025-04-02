@@ -130,7 +130,31 @@ LIBS += -L$$CORE_BUILDS_LIBRARIES_PATH -lCryptoPPLib
 
 #All dynamic libs
 
-ADD_DEPENDENCY(graphics, kernel, UnicodeConverter, kernel_network, Fb2File, PdfFile, HtmlFile2, EpubFile, XpsFile, DjVuFile, doctrenderer, DocxRenderer, IWorkFile, HWPFile)
+ADD_DEPENDENCY(graphics, kernel, UnicodeConverter, kernel_network, doctrenderer, DocxRenderer)
+
+DEFINES += X2T_USE_FB2FILE
+ADD_DEPENDENCY(Fb2File)
+
+DEFINES += X2T_USE_PDFFILE
+ADD_DEPENDENCY(PdfFile)
+
+DEFINES += X2T_USE_HTMLFILE2
+ADD_DEPENDENCY(HtmlFile2)
+
+DEFINES += X2T_USE_EPUBFILE
+ADD_DEPENDENCY(EpubFile)
+
+DEFINES += X2T_USE_XPSFILE
+ADD_DEPENDENCY(XpsFile)
+
+DEFINES += X2T_USE_DJVUFILE
+ADD_DEPENDENCY(DjVuFile)
+
+#DEFINED += X2T_USE_IWORKFILE
+#ADD_DEPENDENCY(IWorkFile)
+
+#DEFINES += X2T_USE_HWPFILE
+#ADD_DEPENDENCY(HWPFile)
 
 #####################################################
 # внешнее подключение сторонних библиотек

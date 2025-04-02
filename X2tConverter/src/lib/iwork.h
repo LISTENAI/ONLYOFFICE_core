@@ -38,6 +38,7 @@ namespace NExtractTools
 {
 	_UINT32 iworkformat2odf(const std::wstring& sFrom, const std::wstring& sTo, InputParams& params, ConvertParams& convertParams, IWorkFileType eVerificationType)
 	{
+#ifdef X2T_USE_IWORKFILE
 		CIWorkFile oFile;
 		oFile.SetTmpDirectory(convertParams.m_sTempDir);
 
@@ -45,6 +46,9 @@ namespace NExtractTools
 			return AVS_FILEUTILS_ERROR_CONVERT;
 
 		return (S_OK == oFile.Convert2Odf(sFrom, sTo)) ? 0 : AVS_FILEUTILS_ERROR_CONVERT;
+#else
+		return AVS_FILEUTILS_ERROR_CONVERT;
+#endif
 	}
 	_UINT32 pages2odf(const std::wstring& sFrom, const std::wstring& sTo, InputParams& params, ConvertParams& convertParams)
 	{
